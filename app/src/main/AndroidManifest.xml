@@ -13,6 +13,12 @@
         android:theme="@style/Theme.Mensajes"
         tools:targetApi="31">
         <activity
+            android:name=".PeligrodeFalta"
+            android:exported="false" />
+        <activity
+            android:name=".peligrodefaltas"
+            android:exported="false" />
+        <activity
             android:name=".Registrodefaltas"
             android:exported="false" />
         <activity
