@@ -29,8 +29,13 @@ class MainActivity : AppCompatActivity() {
 
     fun verificar() {
         entrar.setOnClickListener {
-            val toast = Toast.makeText(this,"verificar",Toast.LENGTH_SHORT)
-            toast.show()
+            if (correo.text.toString() == "tommy.pozo95@gmail.com") {
+                val toast = Toast.makeText(this,"Correcto",Toast.LENGTH_SHORT)
+                toast.show()
+            } else {
+                val toast = Toast.makeText(this,"Verifica tu correo",Toast.LENGTH_SHORT)
+                toast.show()
+            }
         }
     }
 
