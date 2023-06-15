@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="                Asistencia 5"
             android:textColor="#6CE800"
-            android:textSize="7dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView5"
@@ -74,7 +74,7 @@
             android:layout_height="wrap_content"
             android:text="                Asistencia: 6"
             android:textColor="#F44336"
-            android:textSize="7dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/textView7"
@@ -89,7 +89,7 @@
             android:layout_height="wrap_content"
             android:text="                 Asistencia 5"
             android:textColor="#2E2A9E"
-            android:textSize="7dp" />
+            android:textSize="12sp" />
 
     </LinearLayout>
 

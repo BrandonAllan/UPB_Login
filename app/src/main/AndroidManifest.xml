@@ -12,13 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mensajes"
         tools:targetApi="31">
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/shape" />
-
-        <activity
-            android:name=".Shape"
-            android:exported="false" />
+        
         <activity
             android:name=".InformacionDeMateria"
             android:exported="false" />
