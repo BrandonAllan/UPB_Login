@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Mensajes</string>
     <string name="hint_correo">Correo</string>
+
+    <string name="siguiente">Siguiente</string>
+
     <string name="hint_contrasena">Contraseña</string>
 </resources>
