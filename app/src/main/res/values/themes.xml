@@ -2,7 +2,15 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Mensajes" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/toolbar</item>
+    </style>
+
+    <style name="Widget.AppCompat.Button" parent="Base.Theme.Mensajes">
+        <item name="materialThemeOverlay">@style/BackgroundButtom</item>
+    </style>
+
+    <style name="BackgroundButtom">
+        <item name="colorPrimary">@color/colorTitulo</item>
     </style>
 
     <style name="Theme.Mensajes" parent="Base.Theme.Mensajes" />

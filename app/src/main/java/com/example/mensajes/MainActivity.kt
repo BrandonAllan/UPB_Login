@@ -1,5 +1,6 @@
 package com.example.mensajes
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -29,9 +30,9 @@ class MainActivity : AppCompatActivity() {
 
     fun verificar() {
         entrar.setOnClickListener {
-            if (correo.text.toString() == "tommy.pozo95@gmail.com") {
-                val toast = Toast.makeText(this,"Correcto",Toast.LENGTH_SHORT)
-                toast.show()
+            if (correo.text.toString().trim() != "tommy.pozo95@gmail.com") {
+                val intent = Intent(this, ListaEstudiantes::class.java)
+                startActivity(intent)
             } else {
                 val toast = Toast.makeText(this,"Verifica tu correo",Toast.LENGTH_SHORT)
                 toast.show()

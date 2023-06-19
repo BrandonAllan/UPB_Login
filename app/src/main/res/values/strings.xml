@@ -2,4 +2,6 @@
     <string name="app_name">Mensajes</string>
     <string name="hint_correo">Correo</string>
     <string name="hint_contrasena">Contraseña</string>
+    <string name="estudiante">Lista de estudiantes</string>
+    <string name="buscar">Buscar</string>
 </resources>

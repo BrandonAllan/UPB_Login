@@ -10,4 +10,11 @@
         android:orderInCategory="1"
         app:showAsAction="ifRoom"
         android:icon="@mipmap/ic_launcher"/>
+
+    <item
+        android:id="@+id/search"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="@string/buscar"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"/>
 </menu>
