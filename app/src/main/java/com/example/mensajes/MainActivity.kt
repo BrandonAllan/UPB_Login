@@ -16,6 +16,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        initView()
+        verificar()
+    }
+
+    fun initView() {
+        correo = findViewById(R.id.et_correo)
+        contrasena = findViewById(R.id.et_contrasena)
+        entrar = findViewById(R.id.btn_entrar)
     }
 
     fun verificar() {
