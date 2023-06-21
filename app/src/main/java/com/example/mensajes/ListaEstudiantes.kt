@@ -10,6 +10,7 @@ import android.view.MenuItem
 import androidx.appcompat.widget.SearchView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
+import com.google.gson.Gson
 
 class ListaEstudiantes : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,6 +26,15 @@ class ListaEstudiantes : AppCompatActivity() {
         toolbar.setNavigationOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+
+        val estudiante = Estudiante(
+            123,
+            "pablo",
+            "perez",
+            32)
+        val jsonEstudiante = Gson().toJson(estudiante)
+        preferences("$jsonEstudiante}")
+        Log.d("TAG", "onCreate: ${jsonEstudiante}")
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -79,5 +89,12 @@ class ListaEstudiantes : AppCompatActivity() {
     private fun buscar(query: String) {
         val searchResults = Estudintes.search(query)
         Log.d("TAG", "searchExpenses: $searchResults")
+    }
+
+    fun preferences(json: String) {
+        val pref = getSharedPreferences("sesion", Context.MODE_PRIVATE)
+        val editor = pref.edit()
+        editor.putString("estudiante", json)
+        editor.commit()
     }
 }
