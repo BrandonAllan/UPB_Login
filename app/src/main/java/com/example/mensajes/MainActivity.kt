@@ -6,56 +6,34 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var vm: AlumnoViewModel
     lateinit var correo: EditText
     lateinit var contrasena: EditText
     lateinit var entrar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initView()
-        verificar()
-    }
+        vm = ViewModelProviders.of(this)[AlumnoViewModel::class.java]
 
-    fun initView() {
-        correo = findViewById(R.id.et_correo)
-        contrasena = findViewById(R.id.et_contrasena)
-        entrar = findViewById(R.id.btn_entrar)
-    }
+        vm.obtenerAlumnos().observe(this, Observer {
+            Log.d("TAG", "onCreate: $it")
+        })
 
-    fun verificar() {
-        entrar.setOnClickListener {
-            val toast = Toast.makeText(this,"verificar",Toast.LENGTH_SHORT)
-            toast.show()
+        CoroutineScope(Dispatchers.IO).launch {
+            vm.agregar(Alumno(1, "pablo", "perez"))
         }
-    }
-
-    override fun onStart() {
-        super.onStart()
-
-    }
-
-    override fun onPause() {
-        super.onPause()
-
-    }
-
-    override fun onResume() {
-        super.onResume()
-
-    }
-
-    override fun onStop() {
-        super.onStop()
-
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
 
     }
 }
