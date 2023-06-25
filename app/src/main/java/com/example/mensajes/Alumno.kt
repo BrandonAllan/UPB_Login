@@ -8,7 +8,7 @@ import org.jetbrains.annotations.PropertyKey
 
 @Entity
 data class Alumno(
-    @PrimaryKey val id: Int,
+    @PrimaryKey(autoGenerate = true) val id: Int,
     @NonNull @ColumnInfo(name = "nonbre") val nombre: String,
     @NonNull @ColumnInfo(name = "apellido") val apellido: String
 )

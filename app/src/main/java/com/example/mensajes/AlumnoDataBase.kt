@@ -9,7 +9,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.launch
 
-@Database(entities = [Alumno::class], version = 1)
+@Database(entities = [Alumno::class], version = 2)
 abstract class AlumnoDataBase: RoomDatabase() {
 
     abstract fun alumnoDao(): AlumnoDao
@@ -46,7 +46,7 @@ abstract class AlumnoDataBase: RoomDatabase() {
             val dao = db.alumnoDao()
 
             CoroutineScope(IO).launch {
-                dao.agregar(Alumno(1, "pablo", "perez"))
+                //dao.agregar(Alumno(1, "pablo", "perez"))
             }
         }
     }
