@@ -12,4 +12,6 @@ class AlumnoViewModel(app: Application): AndroidViewModel(app) {
     fun agregar(alumno: Alumno) {
         alumnoapp.agragar(alumno)
     }
+
+    fun alumno(idEstudiante: Int): Alumno = alumnoapp.alumno(idEstudiante)
 }

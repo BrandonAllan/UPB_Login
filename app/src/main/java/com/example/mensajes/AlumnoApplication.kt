@@ -20,4 +20,5 @@ class AlumnoApplication(application: Application) {
     }
 
     fun alumnos() : LiveData<List<Alumno>> = getAlumno
+    fun alumno(idEstudiante: Int) : Alumno = alumnoDao.alumno(idEstudiante)
 }
